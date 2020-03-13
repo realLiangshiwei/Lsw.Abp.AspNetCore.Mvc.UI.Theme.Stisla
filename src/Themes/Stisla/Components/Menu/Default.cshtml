@@ -1,0 +1,50 @@
+﻿@using Volo.Abp.UI.Navigation
+@model ApplicationMenu
+
+    <ul class="sidebar-menu">
+        @foreach (var menuItem in Model.Items)
+        {
+            var elementId = string.IsNullOrEmpty(menuItem.ElementId) ? string.Empty : $"id=\"{menuItem.ElementId}\"";
+            var cssClass = string.IsNullOrEmpty(menuItem.CssClass) ? string.Empty : menuItem.CssClass;
+            var disabled = menuItem.IsDisabled ? "disabled" : string.Empty;
+            if (menuItem.IsLeaf)
+            {
+                if (menuItem.Url != null)
+                {
+                    <li>
+                        <a class="nav-link @cssClass @disabled" href="@(menuItem.Url ?? "#")" @elementId>
+                            @if (menuItem.Icon != null)
+                            {
+                                if (menuItem.Icon.StartsWith("fa"))
+                                {
+                                    <i class="@menuItem.Icon.Replace("fa ","fas ")"></i>
+                                }
+                            }
+                            <span>@menuItem.DisplayName</span>
+                        </a>
+                    </li>
+                }
+            }
+            else
+            {
+                <li class="dropdown">
+                    <a href="#" class="nav-link has-dropdown" id="Menu_@(menuItem.Name)">
+                        @if (menuItem.Icon != null)
+                        {
+                            if (menuItem.Icon.StartsWith("fa"))
+                            {
+                                <i class="@menuItem.Icon.Replace("fa ","fas ")"></i>
+                            }
+                        }
+                        <span>@menuItem.DisplayName</span>
+                    </a>
+                    <ul class="dropdown-menu" style="display: none;">
+                        @foreach (var childMenuItem in menuItem.Items)
+                        {
+                            @await Html.PartialAsync("~/Themes/Stisla/Components/Menu/_MenuItem.cshtml", childMenuItem)
+                        }
+                    </ul>
+                </li>
+            }
+        }
+    </ul>

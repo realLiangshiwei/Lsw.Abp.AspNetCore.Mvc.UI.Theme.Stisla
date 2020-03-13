@@ -1,0 +1,47 @@
+﻿@using Volo.Abp.UI.Navigation
+@model ApplicationMenuItem
+@{
+    var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id=\"{Model.ElementId}\"";
+    var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
+    var disabled = Model.IsDisabled ? "disabled" : string.Empty;
+}
+@if (Model.IsLeaf)
+{
+    if (Model.Url != null)
+    {
+        <li>
+            <a class="nav-link @cssClass @disabled" href="@(Model.Url ?? "#")" @elementId>
+                @if (Model.Icon != null)
+                {
+                    if (Model.Icon.StartsWith("fa"))
+                    {
+                        <i class="@Model.Icon.Replace("fa ","fas ")"></i>
+                    }
+                }
+                @Model.DisplayName
+            </a>
+        </li>
+    }
+}
+else
+{
+    <div class="dropdown">
+        <a href="#" class="nav-link" id="Menu_@(Model.Name)">
+            @if (Model.Icon != null)
+            {
+                if (Model.Icon.StartsWith("fa"))
+                {
+                    <i class="@Model.Icon.Replace("fa ","fas ")"></i>
+                }
+            }
+            <span>@Model.DisplayName</span>
+        </a>
+        <ul class="dropdown-menu" style="display: block;">
+            @foreach (var childMenuItem in Model.Items)
+            {
+                @await Html.PartialAsync("~/Themes/Stisla/Components/Menu/_MenuItem.cshtml", childMenuItem)
+            }
+        </ul>
+    </div>
+}
+

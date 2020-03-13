@@ -1,0 +1,9 @@
+﻿@using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.Brand
+@using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.Menu
+
+<div class="main-sidebar sidebar-style-2" tabindex="1" style="overflow: hidden; outline: none;">
+    <aside id="sidebar-wrapper">
+        @(await Component.InvokeAsync<LeftNavbarBrandViewComponent>())
+        @(await Component.InvokeAsync<LeftNavbarMenuViewComponent>())
+    </aside>
+</div>

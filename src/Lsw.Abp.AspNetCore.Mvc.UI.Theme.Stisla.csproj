@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <Import Project="..\configureawait.props" />
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+
+    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
+    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
+    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
+    <IsPackable>true</IsPackable>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Themes\**\*.cshtml" />
+    <EmbeddedResource Include="Pages\**\*.cshtml" />
+    <EmbeddedResource Include="Views\**\*.cshtml" />
+    <EmbeddedResource Include="wwwroot\**\*.*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="wwwroot\**\*.*" />
+    <Content Remove="Themes\**\*.cshtml" />
+    <Content Remove="Pages\**\*.cshtml" />
+    <Content Remove="Views\**\*.cshtml" />
+    <Content Remove="Properties\launchSettings.json" />
+    <None Remove="Themes\Stisla\Layouts\Account.cshtml" />
+    <None Remove="Themes\Stisla\Layouts\Empty.cshtml" />
+    <None Remove="Themes\Stisla\_ViewImports.cshtml" />
+    <None Include="Properties\launchSettings.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="2.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="2.2.1" />
+  </ItemGroup>
+
+</Project>
