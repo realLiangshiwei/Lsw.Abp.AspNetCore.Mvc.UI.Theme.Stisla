@@ -33,11 +33,10 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
     {
         public override void ConfigureBundle(BundleConfigurationContext context)
         {
-            //context.Files.Add("/themes/stisla/assets/modules/jquery.min.js");
             context.Files.Add("/themes/stisla/assets/modules/popper.js");
             context.Files.Add("/themes/stisla/assets/modules/tooltip.js");
-            context.Files.Add("/themes/stisla/assets/modules/bootstrap/js/bootstrap.min.js");
-            context.Files.Add("/themes/stisla/assets/modules/nicescroll/jquery.nicescroll.min.js");
+            context.Files.Add("/themes/stisla/assets/modules/bootstrap/js/bootstrap.js");
+            context.Files.Add("/themes/stisla/assets/modules/nicescroll/jquery.nicescroll.js");
             context.Files.Add("/themes/stisla/assets/modules/moment.min.js");
             context.Files.Add("/themes/stisla/assets/js/stisla.js");
             context.Files.Add("/themes/stisla/assets/js/scripts.js");

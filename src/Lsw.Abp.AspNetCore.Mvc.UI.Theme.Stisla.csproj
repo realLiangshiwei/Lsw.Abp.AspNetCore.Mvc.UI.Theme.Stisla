@@ -10,6 +10,14 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <IsPackable>true</IsPackable>
     <OutputType>Library</OutputType>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla</Title>
+    <Authors>liangshiwei</Authors>
+    <Description>abp vnext theme package</Description>
+    <PackageIconUrl>https://demo.getstisla.com/assets/img/stisla-fill.svg</PackageIconUrl>
+    <RepositoryUrl>https://github.com/liangshiw/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>abp,abpvnext,theme</PackageTags>
   </PropertyGroup>
 
   <ItemGroup>

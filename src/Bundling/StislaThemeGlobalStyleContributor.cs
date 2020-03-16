@@ -20,8 +20,8 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
     {
         public override void ConfigureBundle(BundleConfigurationContext context)
         {
-            context.Files.Add("/themes/stisla/assets/modules/bootstrap/css/bootstrap.min.css");
-            context.Files.Add("/themes/stisla/assets/modules/fontawesome/css/all.min.css");
+            context.Files.Add("/themes/stisla/assets/modules/bootstrap/css/bootstrap.css");
+            context.Files.Add("/themes/stisla/assets/modules/fontawesome/css/all.css");
             context.Files.Add("/themes/stisla/assets/css/style.css");
             context.Files.Add("/themes/stisla/assets/css/components.css");
 

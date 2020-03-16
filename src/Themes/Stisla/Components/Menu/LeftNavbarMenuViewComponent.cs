@@ -20,5 +20,33 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.Menu
             var menu = await _menuManager.GetAsync(StandardMenus.Main);
             return View("~/Themes/Stisla/Components/Menu/Default.cshtml", menu);
         }
+
+        public static bool ChildActive(ApplicationMenuItemList menu,string currentName)
+        {
+            foreach (var item in menu)
+            {
+                if (item.Name == currentName)
+                {
+                    return true;
+                }
+
+                if (ChildActive(item.Items, currentName))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        public static string ReWriteIcon(string menu,string icon)
+        {
+            switch (menu)
+            {
+                case "AbpIdentity":
+                    return "fas fa-id-card";
+                default:
+                    return icon.StartsWith("fa ") ? icon.Replace("fa ", "fas ") : icon;
+            }
+        }
     }
 }

@@ -38,7 +38,7 @@
     <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
     <title>@pageTitle</title>
 
-    <abp-style-bundle name="@StislaThemeBundles.Styles.Global" />
+    <abp-style-bundle name="@StislaThemeBundles.Styles.Global"/>
 
     @await Component.InvokeAsync(typeof(WidgetStylesViewComponent))
 
@@ -48,31 +48,31 @@
 
 </head>
 <body>
-    <div id="app">
-        <div class="main-wrapper main-wrapper-1">
-            @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Application)
-            <div class="navbar-bg"></div>
-            @(await Component.InvokeAsync<TopNavbarViewComponent>())
-            @(await Component.InvokeAsync<LeftNavbarViewComponent>())
+<div id="app">
+    <div class="main-wrapper main-wrapper-1">
+        @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Application)
+        <div class="navbar-bg"></div>
+        @(await Component.InvokeAsync<TopNavbarViewComponent>())
+        @(await Component.InvokeAsync<LeftNavbarViewComponent>())
 
-            <!-- Main Content -->
-            <div class="main-content">
-                <section class="section">
-                    @RenderBody()
-                </section>
-            </div>
+        <!-- Main Content -->
+        <div class="main-content">
+            <section class="section">
+                @RenderBody()
+            </section>
         </div>
     </div>
+</div>
 
-    <abp-script-bundle name="@StislaThemeBundles.Scripts.Global" />
+<abp-script-bundle name="@StislaThemeBundles.Scripts.Global"/>
 
-    <script src="~/Abp/ApplicationConfigurationScript"></script>
-    <script src="~/Abp/ServiceProxyScript"></script>
+<script src="~/Abp/ApplicationConfigurationScript"></script>
+<script src="~/Abp/ServiceProxyScript"></script>
 
-    @await Component.InvokeAsync(typeof(WidgetScriptsViewComponent))
+@await Component.InvokeAsync(typeof(WidgetScriptsViewComponent))
 
-    @await RenderSectionAsync("scripts", false)
+@await RenderSectionAsync("scripts", false)
 
-    @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.Last, StandardLayouts.Application)
+@await Component.InvokeLayoutHookAsync(LayoutHooks.Body.Last, StandardLayouts.Application)
 </body>
 </html>

@@ -1,22 +1,24 @@
-﻿@using Volo.Abp.UI.Navigation
+﻿@using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.Menu
+@using Volo.Abp.AspNetCore.Mvc.UI.Layout
+@using Volo.Abp.UI.Navigation
+@inject IPageLayout PageLayout
 @model ApplicationMenuItem
 @{
     var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id=\"{Model.ElementId}\"";
     var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
     var disabled = Model.IsDisabled ? "disabled" : string.Empty;
+    var active = PageLayout.Content.MenuItemName == Model.Name ? "active" : "";
+    var childActive = LeftNavbarMenuViewComponent.ChildActive(Model.Items,PageLayout.Content.MenuItemName)?"active":"";
 }
 @if (Model.IsLeaf)
 {
     if (Model.Url != null)
     {
-        <li>
+        <li class="@active">
             <a class="nav-link @cssClass @disabled" href="@(Model.Url ?? "#")" @elementId>
                 @if (Model.Icon != null)
                 {
-                    if (Model.Icon.StartsWith("fa"))
-                    {
-                        <i class="@Model.Icon.Replace("fa ","fas ")"></i>
-                    }
+                    <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon))"></i>
                 }
                 @Model.DisplayName
             </a>
@@ -25,23 +27,20 @@
 }
 else
 {
-    <div class="dropdown">
-        <a href="#" class="nav-link" id="Menu_@(Model.Name)">
+    <li class="dropdown @childActive">
+        <a href="#" class="nav-link has-dropdown" id="Menu_@(Model.Name)">
             @if (Model.Icon != null)
             {
-                if (Model.Icon.StartsWith("fa"))
-                {
-                    <i class="@Model.Icon.Replace("fa ","fas ")"></i>
-                }
+                <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon))"></i>
             }
             <span>@Model.DisplayName</span>
         </a>
-        <ul class="dropdown-menu" style="display: block;">
+        <ul class="dropdown-menu">
             @foreach (var childMenuItem in Model.Items)
             {
                 @await Html.PartialAsync("~/Themes/Stisla/Components/Menu/_MenuItem.cshtml", childMenuItem)
             }
         </ul>
-    </div>
+    </li>
 }
 
