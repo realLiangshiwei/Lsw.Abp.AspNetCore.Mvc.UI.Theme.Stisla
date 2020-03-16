@@ -18,7 +18,7 @@
             <a class="nav-link @cssClass @disabled" href="@(Model.Url ?? "#")" @elementId>
                 @if (Model.Icon != null)
                 {
-                    <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon))"></i>
+                    <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon)"></i>
                 }
                 @Model.DisplayName
             </a>
@@ -27,15 +27,15 @@
 }
 else
 {
-    <li class="dropdown @childActive">
+    <li class="dropdown @childActive" style="margin-left: -10%;">
         <a href="#" class="nav-link has-dropdown" id="Menu_@(Model.Name)">
             @if (Model.Icon != null)
             {
-                <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon))"></i>
+                <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon)"></i>
             }
             <span>@Model.DisplayName</span>
         </a>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu" style="margin-left: 16%;">
             @foreach (var childMenuItem in Model.Items)
             {
                 @await Html.PartialAsync("~/Themes/Stisla/Components/Menu/_MenuItem.cshtml", childMenuItem)

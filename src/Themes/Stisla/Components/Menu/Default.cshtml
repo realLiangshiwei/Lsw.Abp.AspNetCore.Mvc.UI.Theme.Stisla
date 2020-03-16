@@ -20,7 +20,7 @@
                     <a class="nav-link @cssClass @disabled" href="@(menuItem.Url ?? "#")" @elementId>
                         @if (menuItem.Icon != null)
                         {
-                            <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon))"></i>
+                            <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
                         }
                         <span>@menuItem.DisplayName</span>
                     </a>
@@ -33,7 +33,7 @@
                 <a href="#" class="nav-link has-dropdown" id="Menu_@(menuItem.Name)">
                     @if (menuItem.Icon != null)
                     {
-                        <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon))"></i>
+                        <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
                     }
                     <span>@menuItem.DisplayName</span>
                 </a>
