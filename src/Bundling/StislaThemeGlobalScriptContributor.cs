@@ -35,7 +35,6 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
         {
             context.Files.Add("/themes/stisla/assets/modules/popper.js");
             context.Files.Add("/themes/stisla/assets/modules/tooltip.js");
-            context.Files.Add("/themes/stisla/assets/modules/bootstrap/js/bootstrap.js");
             context.Files.Add("/themes/stisla/assets/modules/nicescroll/jquery.nicescroll.js");
             context.Files.Add("/themes/stisla/assets/modules/moment.min.js");
             context.Files.Add("/themes/stisla/assets/js/stisla.js");
