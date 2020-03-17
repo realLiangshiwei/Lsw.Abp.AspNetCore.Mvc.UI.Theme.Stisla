@@ -43,11 +43,11 @@
 </head>
 
 <body>
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Account)
+
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
-            @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Account)
             <div class="navbar-bg"></div>
-
             @(await Component.InvokeAsync<TopNavbarViewComponent>())
             @(await Component.InvokeAsync<LeftNavbarViewComponent>())
 
@@ -97,9 +97,9 @@
     <script src="~/Abp/ApplicationConfigurationScript"></script>
     <script src="~/Abp/ServiceProxyScript"></script>
 
-    @await Component.InvokeAsync(typeof(WidgetScriptsViewComponent))
-
     @await RenderSectionAsync("scripts", false)
+
+    @await Component.InvokeAsync(typeof(WidgetScriptsViewComponent))
 
     @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.Last, StandardLayouts.Account)
 </body>

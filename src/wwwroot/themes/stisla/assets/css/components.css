@@ -1,4 +1,4 @@
-@charset "UTF-8";
+﻿@charset "UTF-8";
 /**
  * Components
  *
@@ -1162,9 +1162,7 @@ tr:first-child > td > .fc-day-grid-event {
   padding: 20px 20px 20px 50px;
   opacity: 1;
 }
-#toast-container > .toast {
-  background-image: none !important;
-}
+
 #toast-container > .toast:before {
   position: absolute;
   left: 17px;

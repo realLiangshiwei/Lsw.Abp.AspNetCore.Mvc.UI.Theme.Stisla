@@ -48,11 +48,10 @@
 </head>
 
 <body>
+@await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Application)
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
-            @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Application)
             <div class="navbar-bg"></div>
-
             @(await Component.InvokeAsync<TopNavbarViewComponent>())
             @(await Component.InvokeAsync<LeftNavbarViewComponent>())
 

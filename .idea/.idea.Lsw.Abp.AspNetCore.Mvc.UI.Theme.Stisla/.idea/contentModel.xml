@@ -89,19 +89,11 @@
               <e p="assets" t="Include">
                 <e p="css" t="Include">
                   <e p="components.css" t="Include" />
-                  <e p="components.css.map" t="Include" />
-                  <e p="components.min.css" t="Include" />
-                  <e p="components.min.css.map" t="Include" />
                   <e p="custom.css" t="Include" />
-                  <e p="custom.css.map" t="Include" />
                   <e p="skins" t="Include">
                     <e p="reverse.css" t="Include" />
-                    <e p="reverse.css.map" t="Include" />
                   </e>
                   <e p="style.css" t="Include" />
-                  <e p="style.css.map" t="Include" />
-                  <e p="style.min.css" t="Include" />
-                  <e p="style.min.css.map" t="Include" />
                 </e>
                 <e p="fonts" t="Include">
                   <e p="nunito-v9-latin-600.eot" t="Include" />
@@ -173,51 +165,24 @@
                   <e p="bootstrap" t="Include">
                     <e p="css" t="Include">
                       <e p="bootstrap-grid.css" t="Include" />
-                      <e p="bootstrap-grid.css.map" t="Include" />
-                      <e p="bootstrap-grid.min.css" t="Include" />
-                      <e p="bootstrap-grid.min.css.map" t="Include" />
                       <e p="bootstrap-reboot.css" t="Include" />
-                      <e p="bootstrap-reboot.css.map" t="Include" />
-                      <e p="bootstrap-reboot.min.css" t="Include" />
-                      <e p="bootstrap-reboot.min.css.map" t="Include" />
                       <e p="bootstrap.css" t="Include" />
-                      <e p="bootstrap.css.map" t="Include" />
-                      <e p="bootstrap.min.css" t="Include" />
-                      <e p="bootstrap.min.css.map" t="Include" />
-                    </e>
-                    <e p="js" t="Include">
-                      <e p="bootstrap.bundle.js" t="Include" />
-                      <e p="bootstrap.bundle.js.map" t="Include" />
-                      <e p="bootstrap.bundle.min.js" t="Include" />
-                      <e p="bootstrap.bundle.min.js.map" t="Include" />
-                      <e p="bootstrap.js" t="Include" />
-                      <e p="bootstrap.js.map" t="Include" />
-                      <e p="bootstrap.min.js" t="Include" />
-                      <e p="bootstrap.min.js.map" t="Include" />
                     </e>
                   </e>
                   <e p="bootstrap-colorpicker" t="Include">
                     <e p="dist" t="Include">
                       <e p="css" t="Include">
                         <e p="bootstrap-colorpicker.css" t="Include" />
-                        <e p="bootstrap-colorpicker.css.map" t="Include" />
-                        <e p="bootstrap-colorpicker.min.css" t="Include" />
-                        <e p="bootstrap-colorpicker.min.css.map" t="Include" />
                       </e>
                       <e p="js" t="Include">
                         <e p="bootstrap-colorpicker.js" t="Include" />
-                        <e p="bootstrap-colorpicker.js.map" t="Include" />
-                        <e p="bootstrap-colorpicker.min.js" t="Include" />
-                        <e p="bootstrap-colorpicker.min.js.map" t="Include" />
                       </e>
                     </e>
-                    <e p="LICENSE" t="Include" />
                   </e>
                   <e p="bootstrap-daterangepicker" t="Include">
                     <e p="daterangepicker.css" t="Include" />
                     <e p="daterangepicker.js" t="Include" />
                     <e p="daterangepicker.scss" t="Include" />
-                    <e p="drp.png" t="Include" />
                   </e>
                   <e p="bootstrap-social" t="Include">
                     <e p="bootstrap-social.css" t="Include" />
@@ -228,20 +193,15 @@
                   <e p="bootstrap-tagsinput" t="Include">
                     <e p="dist" t="Include">
                       <e p="bootstrap-tagsinput-angular.js" t="Include" />
-                      <e p="bootstrap-tagsinput-angular.min.js" t="Include" />
-                      <e p="bootstrap-tagsinput-angular.min.js.map" t="Include" />
                       <e p="bootstrap-tagsinput.css" t="Include" />
                       <e p="bootstrap-tagsinput.js" t="Include" />
                       <e p="bootstrap-tagsinput.less" t="Include" />
-                      <e p="bootstrap-tagsinput.min.js" t="Include" />
-                      <e p="bootstrap-tagsinput.min.js.map" t="Include" />
                     </e>
                     <e p="LICENSE" t="Include" />
                   </e>
                   <e p="bootstrap-timepicker" t="Include">
                     <e p="css" t="Include">
                       <e p="bootstrap-timepicker.css" t="Include" />
-                      <e p="bootstrap-timepicker.min.css" t="Include" />
                       <e p="timepicker.less" t="Include" />
                     </e>
                     <e p="js" t="Include">
@@ -263,10 +223,8 @@
                         <e p="loader.gif" t="Include" />
                         <e p="right.png" t="Include" />
                       </e>
-                      <e p="index.html" t="Include" />
                       <e p="js" t="Include">
                         <e p="jquery.chocolat.js" t="Include" />
-                        <e p="jquery.chocolat.min.js" t="Include" />
                       </e>
                     </e>
                   </e>
@@ -521,15 +479,10 @@
                         <e p="cleave-phone.zw.js" t="Include" />
                       </e>
                       <e p="cleave-angular.js" t="Include" />
-                      <e p="cleave-angular.min.js" t="Include" />
                       <e p="cleave-react-node.js" t="Include" />
-                      <e p="cleave-react-node.min.js" t="Include" />
                       <e p="cleave-react.js" t="Include" />
-                      <e p="cleave-react.min.js" t="Include" />
                       <e p="cleave.js" t="Include" />
-                      <e p="cleave.min.js" t="Include" />
                     </e>
-                    <e p="LICENSE" t="Include" />
                   </e>
                   <e p="codemirror" t="Include">
                     <e p="addon" t="Include">
@@ -1231,17 +1184,11 @@
                     <e p="DataTables-1.10.16" t="Include">
                       <e p="css" t="Include">
                         <e p="dataTables.bootstrap.css" t="Include" />
-                        <e p="dataTables.bootstrap.min.css" t="Include" />
                         <e p="dataTables.bootstrap4.css" t="Include" />
-                        <e p="dataTables.bootstrap4.min.css" t="Include" />
                         <e p="dataTables.foundation.css" t="Include" />
-                        <e p="dataTables.foundation.min.css" t="Include" />
                         <e p="dataTables.jqueryui.css" t="Include" />
-                        <e p="dataTables.jqueryui.min.css" t="Include" />
                         <e p="dataTables.semanticui.css" t="Include" />
-                        <e p="dataTables.semanticui.min.css" t="Include" />
                         <e p="jquery.dataTables.css" t="Include" />
-                        <e p="jquery.dataTables.min.css" t="Include" />
                       </e>
                       <e p="images" t="Include">
                         <e p="sort_asc.png" t="Include" />
@@ -1252,71 +1199,44 @@
                       </e>
                       <e p="js" t="Include">
                         <e p="dataTables.bootstrap.js" t="Include" />
-                        <e p="dataTables.bootstrap.min.js" t="Include" />
                         <e p="dataTables.bootstrap4.js" t="Include" />
-                        <e p="dataTables.bootstrap4.min.js" t="Include" />
                         <e p="dataTables.foundation.js" t="Include" />
-                        <e p="dataTables.foundation.min.js" t="Include" />
                         <e p="dataTables.jqueryui.js" t="Include" />
-                        <e p="dataTables.jqueryui.min.js" t="Include" />
                         <e p="dataTables.semanticui.js" t="Include" />
-                        <e p="dataTables.semanticui.min.js" t="Include" />
                         <e p="jquery.dataTables.js" t="Include" />
-                        <e p="jquery.dataTables.min.js" t="Include" />
                       </e>
                     </e>
                     <e p="datatables.css" t="Include" />
                     <e p="datatables.js" t="Include" />
-                    <e p="datatables.min.css" t="Include" />
-                    <e p="datatables.min.js" t="Include" />
                     <e p="Responsive-2.2.1" t="Include">
                       <e p="css" t="Include">
                         <e p="responsive.bootstrap.css" t="Include" />
-                        <e p="responsive.bootstrap.min.css" t="Include" />
                         <e p="responsive.bootstrap4.css" t="Include" />
-                        <e p="responsive.bootstrap4.min.css" t="Include" />
                         <e p="responsive.dataTables.css" t="Include" />
-                        <e p="responsive.dataTables.min.css" t="Include" />
                         <e p="responsive.foundation.css" t="Include" />
-                        <e p="responsive.foundation.min.css" t="Include" />
                         <e p="responsive.jqueryui.css" t="Include" />
-                        <e p="responsive.jqueryui.min.css" t="Include" />
                         <e p="responsive.semanticui.css" t="Include" />
-                        <e p="responsive.semanticui.min.css" t="Include" />
                       </e>
                       <e p="js" t="Include">
                         <e p="dataTables.responsive.js" t="Include" />
-                        <e p="dataTables.responsive.min.js" t="Include" />
                         <e p="responsive.bootstrap.js" t="Include" />
-                        <e p="responsive.bootstrap.min.js" t="Include" />
                         <e p="responsive.bootstrap4.js" t="Include" />
-                        <e p="responsive.bootstrap4.min.js" t="Include" />
                         <e p="responsive.foundation.js" t="Include" />
-                        <e p="responsive.foundation.min.js" t="Include" />
                         <e p="responsive.jqueryui.js" t="Include" />
-                        <e p="responsive.jqueryui.min.js" t="Include" />
                         <e p="responsive.semanticui.js" t="Include" />
-                        <e p="responsive.semanticui.min.js" t="Include" />
                       </e>
                     </e>
                     <e p="Select-1.2.4" t="Include">
                       <e p="css" t="Include">
                         <e p="select.bootstrap.css" t="Include" />
-                        <e p="select.bootstrap.min.css" t="Include" />
                         <e p="select.bootstrap4.css" t="Include" />
-                        <e p="select.bootstrap4.min.css" t="Include" />
                         <e p="select.dataTables.css" t="Include" />
-                        <e p="select.dataTables.min.css" t="Include" />
                         <e p="select.foundation.css" t="Include" />
-                        <e p="select.foundation.min.css" t="Include" />
                         <e p="select.jqueryui.css" t="Include" />
-                        <e p="select.jqueryui.min.css" t="Include" />
                         <e p="select.semanticui.css" t="Include" />
-                        <e p="select.semanticui.min.css" t="Include" />
                       </e>
                       <e p="js" t="Include">
                         <e p="dataTables.select.js" t="Include" />
-                        <e p="dataTables.select.min.js" t="Include" />
                       </e>
                     </e>
                   </e>
@@ -4882,7 +4802,6 @@
                     <e p="jquery-ui.theme.min.css" t="Include" />
                     <e p="LICENSE.txt" t="Include" />
                   </e>
-                  <e p="jquery.min.js" t="Include" />
                   <e p="jquery.sparkline.min.js" t="Include" />
                   <e p="jqvmap" t="Include">
                     <e p="dist" t="Include">

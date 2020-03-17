@@ -57,7 +57,7 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla
                     .Add(StislaThemeBundles.Styles.Global, bundle =>
                     {
                         bundle
-                            //.AddBaseBundles(StandardBundles.Styles.Global)
+                            .AddBaseBundles(StandardBundles.Styles.Global)
                             .AddContributors(typeof(StislaThemeGlobalStyleContributor));
                     });
 
@@ -66,7 +66,7 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla
                     .Add(StislaThemeBundles.Scripts.Global, bundle =>
                     {
                         bundle
-                            //.AddBaseBundles(StandardBundles.Scripts.Global)
+                            .AddBaseBundles(StandardBundles.Scripts.Global)
                             .AddContributors(typeof(StislaThemeGlobalScriptContributor));
                     });
             });
