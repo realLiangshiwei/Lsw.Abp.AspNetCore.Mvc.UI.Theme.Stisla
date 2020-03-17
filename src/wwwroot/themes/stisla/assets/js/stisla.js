@@ -258,3 +258,6 @@
   }
 })(jQuery, this, 0);
 
+$(function() {
+    $(".card-header .row").addClass("col-md-12");
+})
