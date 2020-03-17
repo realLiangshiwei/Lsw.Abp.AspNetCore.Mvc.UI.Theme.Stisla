@@ -1,4 +1,5 @@
-﻿using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
+﻿using System.Linq;
+using Volo.Abp.AspNetCore.Mvc.UI.Bundling;
 
 namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
 {
@@ -6,6 +7,7 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
     {
         public override void ConfigureBundle(BundleConfigurationContext context)
         {
+            context.Files.RemoveAll(x => x.Contains("bootstrap.css"));
             context.Files.Add("/themes/stisla/assets/modules/bootstrap/css/bootstrap.css");
             context.Files.Add("/themes/stisla/assets/modules/fontawesome/css/all.css");
             context.Files.Add("/themes/stisla/assets/css/style.css");

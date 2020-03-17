@@ -3,8 +3,8 @@
 @if (Model.OtherLanguages.Any())
 {
     <li class="dropdown">
-        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg">
-            <div class="d-sm-none d-lg-inline-block">@Model.CurrentLanguage.DisplayName</div>
+        <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg" style="margin-top: 3px">
+            <span>@Model.CurrentLanguage.DisplayName</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right">
             @foreach (var language in Model.OtherLanguages)
