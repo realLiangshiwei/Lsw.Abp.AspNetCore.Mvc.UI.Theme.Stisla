@@ -3,6 +3,8 @@
 
 abp framework mvc ui theme package,It uses bootstrap, so it is compatible with abp tag helper.
 
+ [![NuGet](https://img.shields.io/nuget/v/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla)](https://www.nuget.org/packages/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla/) [![NuGet](https://img.shields.io/nuget/dt/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla)](https://www.nuget.org/packages/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla/)
+
 ## Getting Started
 
 Create a new project using abp CLI

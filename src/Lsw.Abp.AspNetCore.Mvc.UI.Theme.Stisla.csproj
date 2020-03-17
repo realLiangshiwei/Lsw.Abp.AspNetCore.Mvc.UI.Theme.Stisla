@@ -18,7 +18,7 @@
     <RepositoryUrl>https://github.com/liangshiw/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>abp,abpvnext,theme</PackageTags>
-    <Version>1.2.1</Version>
+    <Version>1.2.2</Version>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
