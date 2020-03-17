@@ -1739,7 +1739,7 @@ h6 .badge {
 .dropdown-menu {
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.03);
   border: none;
-  width: 200px; }
+  min-width: 200px; }
   .dropdown-menu.show {
     display: block !important; }
   .dropdown-menu a {
