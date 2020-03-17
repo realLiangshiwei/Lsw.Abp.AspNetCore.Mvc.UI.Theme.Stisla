@@ -27,7 +27,7 @@
 }
 else
 {
-    <li class="dropdown @childActive" style="margin-left: -10%;">
+    <li class="dropdown @childActive">
         <a href="#" class="nav-link has-dropdown" id="Menu_@(Model.Name)">
             @if (Model.Icon != null)
             {
@@ -35,7 +35,7 @@ else
             }
             <span>@Model.DisplayName</span>
         </a>
-        <ul class="dropdown-menu" style="margin-left: 16%;">
+        <ul class="dropdown-menu">
             @foreach (var childMenuItem in Model.Items)
             {
                 @await Html.PartialAsync("~/Themes/Stisla/Components/Menu/_MenuItem.cshtml", childMenuItem)

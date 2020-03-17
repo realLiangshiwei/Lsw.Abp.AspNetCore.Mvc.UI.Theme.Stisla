@@ -10,6 +10,7 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
             context.Files.Add("/themes/stisla/assets/modules/fontawesome/css/all.css");
             context.Files.Add("/themes/stisla/assets/css/style.css");
             context.Files.Add("/themes/stisla/assets/css/components.css");
+            context.Files.Add("/themes/stisla/assets/css/custom.css");
         }
     }
 }
