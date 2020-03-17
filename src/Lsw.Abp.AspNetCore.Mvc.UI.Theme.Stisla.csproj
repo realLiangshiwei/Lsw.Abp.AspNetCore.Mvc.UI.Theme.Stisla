@@ -18,7 +18,7 @@
     <RepositoryUrl>https://github.com/liangshiw/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>abp,abpvnext,theme</PackageTags>
-    <Version>1.2.0</Version>
+    <Version>1.2.1</Version>
     <PackageIcon>icon.png</PackageIcon>
   </PropertyGroup>
 
@@ -38,7 +38,7 @@
     <None Remove="Themes\Stisla\Layouts\Account.cshtml" />
     <None Remove="Themes\Stisla\Layouts\Empty.cshtml" />
     <None Remove="Themes\Stisla\_ViewImports.cshtml" />
-    <None Include="C:\Users\l\Desktop\icon.png">
+    <None Include="..\icon.png">
       <Pack>True</Pack>
       <PackagePath></PackagePath>
     </None>
