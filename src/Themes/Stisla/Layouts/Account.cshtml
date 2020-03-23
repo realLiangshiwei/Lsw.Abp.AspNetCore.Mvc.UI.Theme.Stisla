@@ -47,46 +47,45 @@
 
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
-            <div class="navbar-bg"></div>
-            @(await Component.InvokeAsync<TopNavbarViewComponent>())
-            @(await Component.InvokeAsync<LeftNavbarViewComponent>())
-
             <!-- Main Content -->
-            <div class="main-content">
-                <section class="section">
-                    <abp-row>
-                        <abp-column size-md="_5" class="mx-auto">
-                            @if (MultiTenancyOptions.Value.IsEnabled &&
-                               (TenantResolveResultAccessor.Result?.AppliedResolvers?.Contains(CookieTenantResolveContributor.ContributorName) == true))
-                            {
-                                <div class="card shadow-sm rounded mb-3">
-                                    <div class="card-body px-5">
-                                        <div class="row">
-                                            <div class="col">
-                                                <span style="font-size: .8em;" class="text-uppercase text-muted">@MultiTenancyStringLocalizer["Tenant"]</span><br />
-                                                <h6 class="m-0 d-inline-block">
-                                                    @if (CurrentTenant.Id == null)
-                                                    {
-                                                        <span>
-                                                            @MultiTenancyStringLocalizer["NotSelected"]
-                                                        </span>
-                                                    }
-                                                    else
-                                                    {
-                                                        <strong>@(CurrentTenant.Name ?? CurrentTenant.Id.Value.ToString())</strong>
-                                                    }
-                                                </h6>
-                                            </div>
-                                            <div class="col-auto">
-                                                <a id="AbpTenantSwitchLink" href="javascript:;" class="btn btn-sm mt-3 btn-outline-primary">@MultiTenancyStringLocalizer["Switch"]</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            }
-                            @RenderBody()
-                        </abp-column>
-                    </abp-row>
+            <div>
+                 <section class="section" style="width: 60%;margin-top: 10%;margin-left: auto;margin-right: auto">
+                     <abp-row>
+                         <div class="account-brand p-4 text-center mb-1">
+                             <a alt="MyProjectName" class="navbar-brand" routerlink="/" href="/"></a><!---->
+                         </div>
+                         <abp-column size-md="_5" class="mx-auto">
+                             @if (MultiTenancyOptions.Value.IsEnabled &&
+                                  (TenantResolveResultAccessor.Result?.AppliedResolvers?.Contains(CookieTenantResolveContributor.ContributorName) == true))
+                             {
+                                 <div class="card shadow-sm rounded mb-3">
+                                     <div class="card-body px-5">
+                                         <div class="row">
+                                             <div class="col">
+                                                 <span style="font-size: .8em;" class="text-uppercase text-muted">@MultiTenancyStringLocalizer["Tenant"]</span><br/>
+                                                 <h6 class="m-0 d-inline-block">
+                                                     @if (CurrentTenant.Id == null)
+                                                     {
+                                                         <span>
+                                                             @MultiTenancyStringLocalizer["NotSelected"]
+                                                         </span>
+                                                     }
+                                                     else
+                                                     {
+                                                         <strong>@(CurrentTenant.Name ?? CurrentTenant.Id.Value.ToString())</strong>
+                                                     }
+                                                 </h6>
+                                             </div>
+                                             <div class="col-auto">
+                                                 <a id="AbpTenantSwitchLink" href="javascript:;" class="btn btn-sm mt-3 btn-outline-primary">@MultiTenancyStringLocalizer["Switch"]</a>
+                                             </div>
+                                         </div>
+                                     </div>
+                                 </div>
+                             }
+                             @RenderBody()
+                         </abp-column>
+                     </abp-row>
                 </section>
             </div>
         </div>
