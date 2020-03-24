@@ -4,6 +4,7 @@
 @using Volo.Abp.AspNetCore.Mvc.UI.Layout
 @using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
 @using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.LeftNavbar
+@using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.PageAlerts
 @using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.TopNavbar
 @using Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared.Components
 @using Volo.Abp.AspNetCore.Mvc.UI.Theming
@@ -59,6 +60,7 @@
             <!-- Main Content -->
             <div class="main-content">
                 <section class="section">
+                    @(await Component.InvokeAsync<PageAlertsViewComponent>())
                     @RenderBody()
                 </section>
             </div>

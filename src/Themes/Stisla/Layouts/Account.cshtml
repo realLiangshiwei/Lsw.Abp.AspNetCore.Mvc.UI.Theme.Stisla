@@ -2,6 +2,7 @@
 @using Volo.Abp.AspNetCore.Mvc.UI.Components.LayoutHook
 @using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
 @using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.LeftNavbar
+@using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.PageAlerts
 @using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.TopNavbar
 @using Microsoft.Extensions.Localization
 @using Microsoft.Extensions.Options
@@ -83,6 +84,7 @@
                                      </div>
                                  </div>
                              }
+                             @(await Component.InvokeAsync<PageAlertsViewComponent>())
                              @RenderBody()
                          </abp-column>
                      </abp-row>
