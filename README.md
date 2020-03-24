@@ -9,11 +9,11 @@ abp framework mvc ui theme package,It uses bootstrap, so it is compatible with a
 
 Create a new project using abp CLI
 
-`abp new BookStore`
+* `abp new BookStore`
 
-Install `Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla` nuget package to `.web` project .
+Install `Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla` nuget package to `.web` project:
 
-`Install-Package Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla`
+* `Install-Package Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla`
 
 Open the module class of the `.web` project and change `AbpAspNetCoreMvcUiBasicThemeModule` to `AbpAspNetCoreMvcUiStislaThemeModule`
 
@@ -23,4 +23,4 @@ All done. Run the project and enjoy coding.
 
 ## More
 
-[stisla](https://github.com/stisla/stisla) Is a bootstrap-based admin template,see [stisla document](https://docs.getstisla.com/#/en/2.2.0/overview) for more information.
+[Stisla](https://github.com/stisla/stisla) Is a bootstrap-based admin template,see [stisla document](https://docs.getstisla.com/#/en/2.2.0/overview) for more information.
