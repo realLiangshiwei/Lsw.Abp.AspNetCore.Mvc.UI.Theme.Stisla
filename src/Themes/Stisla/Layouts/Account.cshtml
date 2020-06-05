@@ -1,9 +1,7 @@
 ﻿@using Volo.Abp.AspNetCore.Mvc.AntiForgery
 @using Volo.Abp.AspNetCore.Mvc.UI.Components.LayoutHook
 @using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Bundling
-@using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.LeftNavbar
 @using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.PageAlerts
-@using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.TopNavbar
 @using Microsoft.Extensions.Localization
 @using Microsoft.Extensions.Options
 @using Volo.Abp.AspNetCore.MultiTenancy
@@ -53,7 +51,7 @@
                  <section class="section" style="width: 60%;margin-top: 10%;margin-left: auto;margin-right: auto">
                      <abp-row>
                          <div class="account-brand p-4 text-center mb-1">
-                             <a alt="MyProjectName" class="navbar-brand" routerlink="/" href="/"></a><!---->
+                             <a alt="MyProjectName" class="navbar-brand" routerlink="/" href="~/"></a><!---->
                          </div>
                          <abp-column size-md="_5" class="mx-auto">
                              @if (MultiTenancyOptions.Value.IsEnabled &&

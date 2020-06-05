@@ -14,7 +14,7 @@
     }
 
     <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
-        <img alt="image" src="/themes/stisla/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+        <img alt="image" src="~/themes/stisla/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
         <div class="d-sm-none d-lg-inline-block">Hi,@userName</div>
     </a>
 
@@ -26,8 +26,9 @@
                 var elementId = string.IsNullOrEmpty(menuItem.ElementId) ? string.Empty : $"id=\"{menuItem.ElementId}\"";
                 var cssClass = string.IsNullOrEmpty(menuItem.CssClass) ? string.Empty : menuItem.CssClass;
                 var disabled = menuItem.IsDisabled ? "disabled" : string.Empty;
+                var url = string.IsNullOrEmpty(menuItem.Url) ? "#" : Url.Content(menuItem.Url);
 
-                <a href="@(menuItem.Url ?? "#")" class="dropdown-item has-icon @cssClass @disabled" target="@menuItem.Target" @Html.Raw(elementId)>
+                <a href="@url" class="dropdown-item has-icon @cssClass @disabled" target="@menuItem.Target" @Html.Raw(elementId)>
                     @if (menuItem.Icon != null)
                     {
                         if (menuItem.Icon.StartsWith("fa"))

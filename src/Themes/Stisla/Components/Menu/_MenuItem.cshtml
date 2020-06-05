@@ -9,13 +9,14 @@
     var disabled = Model.IsDisabled ? "disabled" : string.Empty;
     var active = PageLayout.Content.MenuItemName == Model.Name ? "active" : "";
     var childActive = LeftNavbarMenuViewComponent.ChildActive(Model.Items,PageLayout.Content.MenuItemName)?"active":"";
+    var url = string.IsNullOrEmpty(Model.Url) ? "#" : Url.Content(Model.Url);
 }
 @if (Model.IsLeaf)
 {
     if (Model.Url != null)
     {
         <li class="@active">
-            <a class="nav-link @cssClass @disabled" href="@(Model.Url ?? "#")" @elementId>
+            <a class="nav-link @cssClass @disabled" href="@url" @elementId>
                 @if (Model.Icon != null)
                 {
                     <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon)"></i>
