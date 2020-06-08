@@ -3,7 +3,12 @@
 @using Volo.Abp.UI.Navigation
 @inject IPageLayout PageLayout
 @model ApplicationMenu
-
+@functions{
+    string GetUrl(string url)
+    {
+        return string.IsNullOrEmpty(url) ? "#" : Url.Content(url);
+    }
+}
 <ul class="sidebar-menu">
     @foreach (var menuItem in Model.Items)
     {
@@ -17,7 +22,7 @@
             if (menuItem.Url != null)
             {
                 <li class="@active">
-                    <a class="nav-link @cssClass @disabled" href="@(menuItem.Url ?? "#")" @elementId>
+                    <a class="nav-link @cssClass @disabled" href="@(GetUrl(menuItem.Url))" @elementId>
                         @if (menuItem.Icon != null)
                         {
                             <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
