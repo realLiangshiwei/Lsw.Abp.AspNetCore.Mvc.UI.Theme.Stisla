@@ -93,3 +93,16 @@ body .sidebar-menu .dropdown .dropdown-menu .dropdown {
 body .sidebar-menu .dropdown .dropdown-menu .dropdown .dropdown-menu {
    margin-left: 16%
 }
+
+@media (min-width: 992px) {
+    .modal-lg,
+    .modal-xl {
+        max-width: 800px !important;
+    }
+}
+
+@media (min-width: 1200px) {
+    .modal-xl {
+        max-width: 1140px !important;
+    }
+}

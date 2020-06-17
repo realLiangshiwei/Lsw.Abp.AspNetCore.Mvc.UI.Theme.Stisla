@@ -8,20 +8,19 @@
     var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
     var disabled = Model.IsDisabled ? "disabled" : string.Empty;
     var active = PageLayout.Content.MenuItemName == Model.Name ? "active" : "";
-    var childActive = LeftNavbarMenuViewComponent.ChildActive(Model.Items,PageLayout.Content.MenuItemName)?"active":"";
+    var childActive = LeftNavbarMenuViewComponent.ChildActive(Model.Items, PageLayout.Content.MenuItemName) ? "active" : "";
     var url = string.IsNullOrEmpty(Model.Url) ? "#" : Url.Content(Model.Url);
 }
 @if (Model.IsLeaf)
 {
     if (Model.Url != null)
     {
-        <li class="@active">
+        <li class="dropdown @active">
             <a class="nav-link @cssClass @disabled" href="@url" @elementId>
-                @if (Model.Icon != null)
-                {
-                    <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon)"></i>
-                }
-                @Model.DisplayName
+
+                <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon)"></i>
+
+                <span>@Model.DisplayName</span>
             </a>
         </li>
     }
@@ -30,10 +29,9 @@ else
 {
     <li class="dropdown @childActive">
         <a href="#" class="nav-link has-dropdown" id="Menu_@(Model.Name)">
-            @if (Model.Icon != null)
-            {
-                <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon)"></i>
-            }
+
+            <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(Model.Name, Model.Icon)"></i>
+
             <span>@Model.DisplayName</span>
         </a>
         <ul class="dropdown-menu">
@@ -44,4 +42,3 @@ else
         </ul>
     </li>
 }
-

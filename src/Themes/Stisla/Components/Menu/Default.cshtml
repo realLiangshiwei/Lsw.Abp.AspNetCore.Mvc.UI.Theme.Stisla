@@ -19,10 +19,9 @@
             {
                 <li class="@active">
                     <a class="nav-link @cssClass @disabled" href="@url" @elementId>
-                        @if (menuItem.Icon != null)
-                        {
-                            <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
-                        }
+
+                        <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
+
                         <span>@menuItem.DisplayName</span>
                     </a>
                 </li>
@@ -32,10 +31,9 @@
         {
             <li class="dropdown @childActive">
                 <a href="#" class="nav-link has-dropdown" id="Menu_@(menuItem.Name)">
-                    @if (menuItem.Icon != null)
-                    {
-                        <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
-                    }
+
+                    <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
+
                     <span>@menuItem.DisplayName</span>
                 </a>
                 <ul class="dropdown-menu">

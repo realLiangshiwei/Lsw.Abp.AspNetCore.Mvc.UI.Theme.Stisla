@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Volo.Abp.AspNetCore.Mvc;
 using Volo.Abp.UI.Navigation;
@@ -40,6 +41,11 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.Menu
 
         public static string ReWriteIcon(string menu,string icon)
         {
+            if (icon.IsNullOrEmpty())
+            {
+                return "fas";
+            }
+
             switch (menu)
             {
                 case "AbpIdentity":
