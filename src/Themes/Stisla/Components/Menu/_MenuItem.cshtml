@@ -4,7 +4,7 @@
 @inject IPageLayout PageLayout
 @model ApplicationMenuItem
 @{
-    var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id=\"{Model.ElementId}\"";
+    var elementId = string.IsNullOrEmpty(Model.ElementId) ? string.Empty : $"id={Model.ElementId}";
     var cssClass = string.IsNullOrEmpty(Model.CssClass) ? string.Empty : Model.CssClass;
     var disabled = Model.IsDisabled ? "disabled" : string.Empty;
     var active = PageLayout.Content.MenuItemName == Model.Name ? "active" : "";

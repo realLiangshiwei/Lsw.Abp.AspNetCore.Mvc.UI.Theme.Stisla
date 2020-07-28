@@ -9,6 +9,7 @@
 @using Volo.Abp.AspNetCore.Mvc.UI.Theming
 @using Volo.Abp.AspNetCore.Mvc.UI.Widgets.Components.WidgetScripts
 @using Volo.Abp.AspNetCore.Mvc.UI.Widgets.Components.WidgetStyles
+@using Volo.Abp.Localization
 @inject IAbpAntiForgeryManager AbpAntiForgeryManager
 @inject IBrandingProvider BrandingProvider
 @inject IPageLayout PageLayout
@@ -28,15 +29,23 @@
 
         pageTitle = PageLayout.Content.Title + pageTitle;
     }
+
+    var rtl = CultureHelper.IsRtl ? "rtl" : string.Empty;
 }
 
 <!DOCTYPE html>
-<html lang="@CultureInfo.CurrentCulture.Name">
+<html lang="@CultureInfo.CurrentCulture.Name" dir="@rtl">
 <head>
-    @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.First, StandardLayouts.Application)
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.First, StandardLayouts.Empty)
     <meta charset="UTF-8">
-    <meta content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no" name="viewport">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>@pageTitle</title>
+
+    @if (ViewBag.Description != null)
+    {
+        <meta name="description" content="@ViewBag.Description" />
+    }
 
     <abp-style-bundle name="@StislaThemeBundles.Styles.Global" />
 
@@ -44,12 +53,12 @@
 
     @await RenderSectionAsync("styles", false)
 
-    @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.Last, StandardLayouts.Application)
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Head.Last, StandardLayouts.Empty)
 
 </head>
 
-<body>
-@await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Application)
+<body dir="@rtl">
+@await Component.InvokeLayoutHookAsync(LayoutHooks.Body.First, StandardLayouts.Empty)
     <div id="app">
         <div class="main-wrapper main-wrapper-1">
             <div class="navbar-bg"></div>
@@ -75,6 +84,6 @@
 
     @await RenderSectionAsync("scripts", false)
 
-    @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.Last, StandardLayouts.Application)
+    @await Component.InvokeLayoutHookAsync(LayoutHooks.Body.Last, StandardLayouts.Empty)
 </body>
 </html>

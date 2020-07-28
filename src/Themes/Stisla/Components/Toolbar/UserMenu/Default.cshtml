@@ -23,7 +23,7 @@
         <div class="dropdown-menu dropdown-menu-right">
             @foreach (var menuItem in Model.Items)
             {
-                var elementId = string.IsNullOrEmpty(menuItem.ElementId) ? string.Empty : $"id=\"{menuItem.ElementId}\"";
+                var elementId = string.IsNullOrEmpty(menuItem.ElementId) ? string.Empty : $"id={menuItem.ElementId}";
                 var cssClass = string.IsNullOrEmpty(menuItem.CssClass) ? string.Empty : menuItem.CssClass;
                 var disabled = menuItem.IsDisabled ? "disabled" : string.Empty;
                 var url = string.IsNullOrEmpty(menuItem.Url) ? "#" : Url.Content(menuItem.Url);
