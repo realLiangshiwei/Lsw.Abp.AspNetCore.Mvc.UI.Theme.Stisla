@@ -17,7 +17,7 @@
     <RepositoryUrl>https://github.com/liangshiw/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>abp,abpvnext,theme</PackageTags>
-    <Version>1.5</Version>
+    <Version>1.6</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -31,8 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="2.9.0" />
-    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="2.9.0" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.MultiTenancy" Version="3.2.1" />
+    <PackageReference Include="Volo.Abp.AspNetCore.Mvc.UI.Theme.Shared" Version="3.2.1" />
   </ItemGroup>
 
 </Project>

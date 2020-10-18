@@ -65,7 +65,9 @@
             <div class="main-content">
                 <section class="section">
                     @(await Component.InvokeAsync<PageAlertsViewComponent>())
+                    @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.First, StandardLayouts.Application)
                     @RenderBody()
+                    @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.Last, StandardLayouts.Application)
                 </section>
             </div>
         </div>
