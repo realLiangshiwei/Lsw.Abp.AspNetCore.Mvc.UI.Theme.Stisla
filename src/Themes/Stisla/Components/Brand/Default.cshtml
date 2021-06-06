@@ -1,8 +1,18 @@
 ﻿@using Volo.Abp.Ui.Branding
 @inject IBrandingProvider BrandingProvider
+
 <div class="sidebar-brand">
+    @if (!BrandingProvider.LogoUrl.IsNullOrWhiteSpace())
+    {
+        <img src="@BrandingProvider.LogoUrl" alt="@BrandingProvider.AppName" >
+    }
     <a href="~/">@BrandingProvider.AppName</a>
-</div>
+</div>·
+
 <div class="sidebar-brand sidebar-brand-sm">
+    @if (!BrandingProvider.LogoUrl.IsNullOrWhiteSpace())
+        {
+            <img src="@BrandingProvider.LogoUrl" alt="@BrandingProvider.AppName" >
+        }
     <a href="~/"></a>
 </div>

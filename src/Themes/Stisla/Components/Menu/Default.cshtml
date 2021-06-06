@@ -18,7 +18,7 @@
             if (menuItem.Url != null)
             {
                 <li class="@active">
-                    <a class="nav-link @cssClass @disabled" href="@url" @elementId>
+                    <a class="nav-link @cssClass @disabled" href="@url" target="@menuItem.Target"  @elementId>
 
                         <i class="@LeftNavbarMenuViewComponent.ReWriteIcon(menuItem.Name, menuItem.Icon)"></i>
 
