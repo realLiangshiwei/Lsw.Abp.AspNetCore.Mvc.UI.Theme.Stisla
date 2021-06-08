@@ -1,9 +1,10 @@
-﻿<Project Sdk="Microsoft.NET.Sdk.web">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <Import Project="..\configureawait.props" />
 
   <PropertyGroup>
     <TargetFramework>net5</TargetFramework>
+    <AddRazorSupportForMvc>true</AddRazorSupportForMvc>
     <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
     <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
@@ -17,7 +18,7 @@
     <RepositoryUrl>https://github.com/liangshiw/Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>abp,abpvnext,theme</PackageTags>
-    <Version>1.8</Version>
+    <Version>1.9</Version>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,8 +27,6 @@
 
   <ItemGroup>
     <Content Remove="wwwroot\**\*.*" />
-	<Content Remove="Properties\launchSettings.json" />
-	<None Include="Properties\launchSettings.json" />
   </ItemGroup>
 
   <ItemGroup>
