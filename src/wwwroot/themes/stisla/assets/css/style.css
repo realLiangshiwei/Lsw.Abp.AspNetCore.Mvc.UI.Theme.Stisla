@@ -111,7 +111,7 @@ p, ul:not(.list-unstyled), ol {
 
 .input-group-text,
 select.form-control:not([size]):not([multiple]),
-.form-control:not(.form-control-sm):not(.form-control-lg) {
+.form-control:not(.form-control-sm):not(.form-control-lg):not([multiple]) {
   font-size: 14px;
   padding: 10px 15px;
   height: 42px; }
