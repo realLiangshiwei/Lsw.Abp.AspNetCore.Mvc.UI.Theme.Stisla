@@ -6,3 +6,14 @@
  */
 
 "use strict";
+
+$(function(){
+    
+    setInterval(function(){
+        for(let btn of $(".btn-close")){
+            $(btn).removeClass("btn-close");
+            $(btn).addClass("close");
+            $(btn).append('<span aria-hidden=\\"true\\">&times;</span>');
+        }
+    },500)
+})

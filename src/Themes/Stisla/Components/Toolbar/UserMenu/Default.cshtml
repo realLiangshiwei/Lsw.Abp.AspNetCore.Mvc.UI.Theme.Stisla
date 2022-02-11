@@ -13,14 +13,14 @@
         var userName = CurrentUser.TenantId != null ? $"{CurrentTenant.Name}\\{CurrentUser.UserName}" : CurrentUser.UserName;
     }
 
-    <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
+    <a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         <img alt="image" src="~/themes/stisla/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
         <div class="d-sm-none d-lg-inline-block">Hi,@userName</div>
     </a>
 
     @if (Model.Items.Any())
     {
-        <div class="dropdown-menu dropdown-menu-right">
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuLink">
             @foreach (var menuItem in Model.Items)
             {
                 var elementId = string.IsNullOrEmpty(menuItem.ElementId) ? string.Empty : $"id={menuItem.ElementId}";

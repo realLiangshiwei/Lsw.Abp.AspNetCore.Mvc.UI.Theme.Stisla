@@ -12,8 +12,6 @@ namespace Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Menus
                 return Task.CompletedTask;
             }
 
-            context.Menu.Items.Insert(0, new ApplicationMenuItem("Stisla.Dashboard", "Dashboard", "/Dashboard", icon: "fas fa-fire"));
-
             return Task.CompletedTask;
         }
     }
