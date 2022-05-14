@@ -17,6 +17,8 @@ Install `Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla` nuget package to `.web` project
 
 Open the module class of the `.web` project and change `AbpAspNetCoreMvcUiBasicThemeModule` to `AbpAspNetCoreMvcUiStislaThemeModule`
 
+Replace `BasicThemeBundles.Styles.Global` with `StislaThemeBundles.Styles.Global`
+
 All done. Run the project and enjoy coding.
 
 ![](/images/1.png)
