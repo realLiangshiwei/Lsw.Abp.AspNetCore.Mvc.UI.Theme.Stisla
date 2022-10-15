@@ -34,7 +34,7 @@ else
 
             <span>@Model.DisplayName</span>
         </a>
-        <ul class="dropdown-menu">
+        <ul class="dropdown-menu @cssClass" id="@elementId">
             @foreach (var childMenuItem in Model.Items)
             {
                 @await Html.PartialAsync("~/Themes/Stisla/Components/Menu/_MenuItem.cshtml", childMenuItem)
