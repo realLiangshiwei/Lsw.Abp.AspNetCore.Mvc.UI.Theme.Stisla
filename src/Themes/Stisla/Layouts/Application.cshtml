@@ -6,11 +6,13 @@
 @using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.LeftNavbar
 @using Lsw.Abp.AspNetCore.Mvc.UI.Theme.Stisla.Themes.Stisla.Components.PageAlerts
 @using Lsw.Abp.AspNetCore.Mvc.Ui.Theme.Stisla.Themes.Stisla.Components.TopNavbar
+@using Volo.Abp.AspNetCore.Mvc.UI.Bundling.TagHelpers
 @using Volo.Abp.AspNetCore.Mvc.UI.Theming
 @using Volo.Abp.AspNetCore.Mvc.UI.Widgets.Components.WidgetScripts
 @using Volo.Abp.AspNetCore.Mvc.UI.Widgets.Components.WidgetStyles
 @using Volo.Abp.Localization
 @using Volo.Abp.Ui.Branding
+@using Volo.Abp.Ui.LayoutHooks
 @inject IAbpAntiForgeryManager AbpAntiForgeryManager
 @inject IBrandingProvider BrandingProvider
 @inject IPageLayout PageLayout
@@ -75,6 +77,7 @@
 
     <abp-script-bundle name="@StislaThemeBundles.Scripts.Global" />
 
+    <script src="~/Abp/ApplicationLocalizationScript?cultureName=@CultureInfo.CurrentUICulture.Name"></script>
     <script src="~/Abp/ApplicationConfigurationScript"></script>
     <script src="~/Abp/ServiceProxyScript"></script>
 
