@@ -19,9 +19,9 @@
 @{
     Layout = null;
     AbpAntiForgeryManager.SetCookie();
-    var containerClass = ViewBag.FluidLayout == true ? "container-fluid" : "container"; //TODO: Better and type-safe options
+    var containerClass = ViewBag.FluidLayout == true ? "container-fluid" : "container";
 
-    var pageTitle = ViewBag.Title == null ? BrandingProvider.AppName : ViewBag.Title; //TODO: Discard to get from Title
+    var pageTitle = ViewBag.Title == null ? BrandingProvider.AppName : ViewBag.Title;
 
     if (PageLayout.Content.Title != null)
     {
@@ -66,10 +66,15 @@
             <!-- Main Content -->
             <div class="main-content">
                 <section class="section">
-                    @(await Component.InvokeAsync<PageAlertsViewComponent>())
-                    @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.First, StandardLayouts.Application)
-                    @RenderBody()
-                    @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.Last, StandardLayouts.Application)
+                    <div class="card">
+                        <div class="col-auto d-flex justify-content-end my-2" id="AbpContentToolbar">
+                            @await RenderSectionAsync("content_toolbar", false)
+                        </div>
+                        @(await Component.InvokeAsync<PageAlertsViewComponent>())
+                        @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.First, StandardLayouts.Application)
+                        @RenderBody()
+                        @await Component.InvokeLayoutHookAsync(LayoutHooks.PageContent.Last, StandardLayouts.Application)
+                     </div>
                 </section>
             </div>
         </div>
