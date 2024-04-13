@@ -9,3 +9,16 @@
         @(await Component.InvokeAsync<TopNavbarToolsViewComponent>())
     </ul>
 </nav>
+
+<script>
+    $(function(){
+        $('[data-toggle="sidebar"]').on('click', function(){
+
+            setTimeout(function(){
+                new DataTable("#DataTables_Table_0").columns.adjust();
+            }, 50);
+          
+         
+        });
+    })
+</script>

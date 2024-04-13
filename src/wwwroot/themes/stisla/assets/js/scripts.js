@@ -178,6 +178,10 @@ $(function() {
       }
     }
 
+    setTimeout(() => {
+      new DataTable("#DataTables_Table_0").columns.adjust();
+    }, 300);
+
     return false;
   });
 
